@@ -8,5 +8,5 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/noise-data', [SensorDataController::class, 'index']);
-Route::post('/noise-data', [SensorDataController::class, 'store']);
+Route::get('/fetch/detection-data', [SensorDataController::class, 'index']);
+Route::post('/detection-data', [SensorDataController::class, 'store']);

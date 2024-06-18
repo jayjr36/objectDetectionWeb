@@ -16,12 +16,12 @@ class SensorDataController extends Controller
     {
         $data = $request->validate([
             'sensor_id' => 'required|string',
-            'noise_level' => 'required|numeric',
+            'detection_level' => 'required|numeric',
         ]);
 
-        $noiseData = SensorData::create($data);
+        $detectionData = SensorData::create($data);
 
-        return response()->json($noiseData, 201);
+        return response()->json($detectionData, 201);
     }
 
 }
