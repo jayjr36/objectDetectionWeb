@@ -7,7 +7,7 @@ use App\Http\Controllers\TextController;
 
 
 
-Route::post('/messages', [TextController::class, 'store']);
+Route::post('/messages', [TextController::class, ' updateGraph']);
 
 Route::get('/fetch/detection-data', [SensorDataController::class, 'index']);
 Route::post('/detection-data', [SensorDataController::class, 'store']);
